@@ -1,0 +1,55 @@
+#container{
+    background: rgb(28, 175, 219);
+    height: 1000px;
+    width: 500px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 10px;
+}
+#userButtons{
+    display: flex;
+    margin-top: 60px; 
+}
+#display{
+    position:relative;
+    background:white;
+    height:200px;
+    width: 450px;
+    left: 25px;
+    top:25px;
+    border-radius: 10px;
+    font-size: 100px;
+    text-align: right;
+    color: rgb(83, 204, 83);
+    font-family: arial;
+    
+}
+#numberContainer{
+    display:inline-flex;
+    flex-wrap: wrap; 
+    
+}
+.number{
+    margin: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 1px pink;
+    font-size: 28px;
+    
+}
+
+#operators{
+    display: flex;
+    flex-direction: column;
+    border-right-style: solid 2px black;
+    
+}
+.operator{
+    height: 75px;
+    width: 75px; 
+    border-radius: 100%;
+    margin: 25px;
+    font-size: 28px;
+}
