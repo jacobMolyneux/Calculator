@@ -1,3 +1,4 @@
+// basic functions 
 function addition(a, b){
     return a + b;
 }
@@ -15,17 +16,17 @@ function divide(a, b){
 // function operator(a, b, operation{
     
 // }
-
+// selecting elements 
 const display = document.getElementById('display');
-const number = document.getElementsByClassName('number');
-displayValue = 0;
-display.textContent = displayValue;
-number.addEventListener('click', inputValue);
-
-function inputValue(){
-    displayValue = number.textContent;
-    display.textContent = 'displayValue';
+const number = document.getElementByClassName('number');
+const  calcValue = 0;
+display.textContent = calcValue;
+function clickedNumber(){
+    calcValue = number.textContent;
+    display.textContent = calcValue;
 }
+number.addEventListener('click', clickedNumber);
+
 
 
 
