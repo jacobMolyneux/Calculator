@@ -1,33 +1,45 @@
-// basic functions 
-function addition(a, b){
-    return a + b;
+// basic functions
+function addition(a, b) {
+  return a + b;
 }
 
-function subtraction(a, b){
-    return a - b;
+function subtraction(a, b) {
+  return a - b;
 }
 
-function multiply(a, b){
-    return a*b;
+function multiply(a, b) {
+  return a * b;
 }
-function divide(a, b){
-    return a/b;
+function divide(a, b) {
+  return a / b;
 }
-// function operator(a, b, operation{
-    
-// }
-// selecting elements 
-const display = document.getElementById('display');
-const number = document.getElementByClassName('number');
-const  calcValue = 0;
-display.textContent = calcValue;
-function clickedNumber(){
-    calcValue = number.textContent;
-    display.textContent = calcValue;
+let numberClicked = (button) => {
+  let value = button.textContent;
+  let display = document.getElementById("display");
+  display.textContent = value;
+  console.log(button.textContent);
+};
+// creating buttons
+for (let i = 0; i < 10; i++) {
+  let button = document.createElement("div");
+  button.textContent = i;
+  button.setAttribute("id", i);
+  button.className = "numberButton";
+  button.addEventListener("click", function () {
+    let display = document.getElementById("displayInput");
+    display.value = button.textContent;
+    console.log(button.textContent);
+  });
+  document.getElementById("numberContainer").appendChild(button);
 }
-number.addEventListener('click', clickedNumber);
-
-
-
-
-
+operatorClicked = (operation) => {
+  if (operation === "addition") {
+    addition();
+  } else if (operation === "subtraction") {
+    subtraction();
+  } else if (operation === "multiply") {
+    multiply();
+  } else if (operation === "divide") {
+    divide();
+  }
+};
